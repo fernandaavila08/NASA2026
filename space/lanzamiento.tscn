@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://0ll21pep28sb"]
+
+[ext_resource type="Script" uid="uid://ca07opqpu1s0l" path="res://lanzamiento.gd" id="1_my12b"]
+
+[node name="lanzamiento" type="Control" unique_id=535530633]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_my12b")
+
+[node name="regreso" type="Button" parent="." unique_id=950647443]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 26.0
+offset_right = 104.0
+offset_bottom = 109.0
+
+[connection signal="pressed" from="regreso" to="." method="_on_button_pressed"]

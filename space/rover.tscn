@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c806xnkp0iapr"]
+
+[ext_resource type="Script" uid="uid://c1oscnk3wbqdq" path="res://rover.gd" id="1_il8ej"]
+
+[node name="rover" type="Control" unique_id=601954722]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_il8ej")
+
+[node name="regreso" type="Button" parent="." unique_id=1791776019]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 15.0
+offset_right = 88.0
+offset_bottom = 75.0
+
+[connection signal="pressed" from="regreso" to="." method="_on_regreso_pressed"]

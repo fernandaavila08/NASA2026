@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://b7m0owc8mcxlm"]
+
+[ext_resource type="Script" uid="uid://b3y22h8vxgfk1" path="res://mision_2.gd" id="1_62t6e"]
+[ext_resource type="Texture2D" uid="uid://ca58057bdjr6c" path="res://bocetomision1.png" id="1_ggdc3"]
+
+[node name="mision2" type="Control" unique_id=1541858817]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_62t6e")
+
+[node name="Bocetomision1" type="Sprite2D" parent="." unique_id=1925287409]
+position = Vector2(576.0748, 324.875)
+scale = Vector2(0.42990652, 0.39867365)
+texture = ExtResource("1_ggdc3")
+
+[node name="nave2" type="Button" parent="." unique_id=62505080]
+layout_mode = 0
+offset_left = 732.0
+offset_top = 128.0
+offset_right = 892.0
+offset_bottom = 487.0
+
+[node name="rover" type="Button" parent="." unique_id=1121888341]
+layout_mode = 0
+offset_left = 944.0
+offset_top = 165.0
+offset_right = 1105.0
+offset_bottom = 550.0
+
+[node name="llegadaalaluna" type="Button" parent="." unique_id=144821712]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 151.0
+offset_right = 662.0
+offset_bottom = 338.0
+
+[node name="orbitas" type="Button" parent="." unique_id=1714853568]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 254.0
+offset_right = 325.0
+offset_bottom = 470.0
+
+[node name="launch" type="Button" parent="." unique_id=1908880649]
+layout_mode = 0
+offset_left = 446.0
+offset_top = 447.0
+offset_right = 645.0
+offset_bottom = 651.0
+
+[connection signal="pressed" from="nave2" to="." method="_on_nave_2_pressed"]
+[connection signal="pressed" from="rover" to="." method="_on_rover_pressed"]
+[connection signal="pressed" from="llegadaalaluna" to="." method="_on_llegadaalaluna_pressed"]
+[connection signal="pressed" from="orbitas" to="." method="_on_orbitas_pressed"]
+[connection signal="pressed" from="launch" to="." method="_on_launch_pressed"]

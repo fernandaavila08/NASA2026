@@ -54,4 +54,19 @@ offset_top = 114.0
 offset_right = 338.0
 offset_bottom = 186.0
 
+[node name="mision2_boton" type="Button" parent="." unique_id=1392114919]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 112.0
+offset_right = 669.0
+offset_bottom = 180.0
+
+[node name="misin3_boton" type="Button" parent="." unique_id=805358280]
+layout_mode = 0
+offset_left = 786.0
+offset_top = 117.0
+offset_right = 1002.0
+offset_bottom = 182.0
+
 [connection signal="pressed" from="mision1_boton" to="." method="_on_mision_1_boton_pressed"]
+[connection signal="pressed" from="mision2_boton" to="." method="_on_mision_2_boton_pressed"]

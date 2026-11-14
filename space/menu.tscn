@@ -29,12 +29,6 @@ position = Vector2(263, 349)
 scale = Vector2(2.4296877, 0.859375)
 texture = ExtResource("1_lti8b")
 
-[node name="Icon4" type="Sprite2D" parent="." unique_id=78523166]
-modulate = Color(0.31764707, 0.0627451, 1, 1)
-position = Vector2(254, 480)
-scale = Vector2(2.4296877, 0.859375)
-texture = ExtResource("1_lti8b")
-
 [node name="play" type="Button" parent="." unique_id=1787851676]
 layout_mode = 0
 offset_left = 98.0
