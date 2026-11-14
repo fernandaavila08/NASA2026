@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dor3bdj8mbq0p" path="res://nave_2.gd" id="1_1kkib"]
 [ext_resource type="Texture2D" uid="uid://ca58057bdjr6c" path="res://bocetomision1.png" id="2_6date"]
+[ext_resource type="PackedScene" uid="uid://bb8hd1ir5eq2d" path="res://navesita.tscn" id="3_6kyd6"]
 
 [node name="nave2" type="Control" unique_id=780213800]
 layout_mode = 3
@@ -18,6 +19,9 @@ scale = Vector2(2.6697674, 4.75)
 texture = ExtResource("2_6date")
 region_enabled = true
 region_rect = Rect2(2152, 256, 430, 136)
+
+[node name="navesita" parent="." unique_id=126782568 instance=ExtResource("3_6kyd6")]
+position = Vector2(592, 304)
 
 [node name="regreso" type="Button" parent="." unique_id=184756370]
 layout_mode = 0
@@ -69,3 +73,9 @@ offset_right = 762.0
 offset_bottom = 496.0
 
 [connection signal="pressed" from="regreso" to="." method="_on_regreso_pressed"]
+[connection signal="pressed" from="topizq" to="." method="_on_topizq_pressed"]
+[connection signal="pressed" from="topder" to="." method="_on_topder_pressed"]
+[connection signal="pressed" from="medioziq" to="." method="_on_medioziq_pressed"]
+[connection signal="pressed" from="medioder" to="." method="_on_medioder_pressed"]
+[connection signal="pressed" from="bottomizq" to="." method="_on_bottomizq_pressed"]
+[connection signal="pressed" from="bottomder" to="." method="_on_bottomder_pressed"]

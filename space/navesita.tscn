@@ -1,15 +1,70 @@
 [gd_scene format=3 uid="uid://bb8hd1ir5eq2d"]
 
+[ext_resource type="Texture2D" uid="uid://dsjgmx2hpmymu" path="res://1.png" id="1_du8rx"]
+[ext_resource type="Texture2D" uid="uid://b0qspyed1fbf5" path="res://2.png" id="2_kobdw"]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w8wy8"]
 radius = 61.0
 height = 298.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1iiv"]
+atlas = ExtResource("1_du8rx")
+region = Rect2(0, 0, 640, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nasl"]
+atlas = ExtResource("1_du8rx")
+region = Rect2(640, 0, 640, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gc2qj"]
+atlas = ExtResource("1_du8rx")
+region = Rect2(1280, 0, 640, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkwry"]
+atlas = ExtResource("2_kobdw")
+region = Rect2(0, 0, 640, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijssj"]
+atlas = ExtResource("2_kobdw")
+region = Rect2(640, 0, 640, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eed6d"]
+atlas = ExtResource("2_kobdw")
+region = Rect2(1280, 0, 640, 1080)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6date"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1iiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nasl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gc2qj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vkwry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ijssj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eed6d")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="navesita" type="Node2D" unique_id=126782568]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1203885569]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=346492365]
-position = Vector2(579, 278)
+scale = Vector2(1.6, 1.6)
 shape = SubResource("CapsuleShape2D_w8wy8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D" unique_id=348899896]
+scale = Vector2(0.44624993, 0.44624993)
+sprite_frames = SubResource("SpriteFrames_6date")
