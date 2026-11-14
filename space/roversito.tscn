@@ -1,21 +1,57 @@
 [gd_scene format=3 uid="uid://2nsjykv2v1ck"]
 
 [ext_resource type="Script" uid="uid://ct38it72fou1o" path="res://roversito.gd" id="1_sg33g"]
-[ext_resource type="Texture2D" uid="uid://b7rcfnncwp8je" path="res://icon.svg" id="2_73nba"]
+[ext_resource type="Texture2D" uid="uid://doy8b84csoax8" path="res://roversquad.png" id="2_sg33g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73nba"]
+atlas = ExtResource("2_sg33g")
+region = Rect2(0, 0, 480, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4ihx"]
+atlas = ExtResource("2_sg33g")
+region = Rect2(480, 0, 480, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3qsv"]
+atlas = ExtResource("2_sg33g")
+region = Rect2(960, 0, 480, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bub8o"]
+atlas = ExtResource("2_sg33g")
+region = Rect2(1440, 0, 480, 1080)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w8wy8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73nba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e4ihx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3qsv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bub8o")
+}],
+"loop": 2,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8wy8"]
-size = Vector2(166, 146)
+size = Vector2(525, 165)
 
 [node name="roversito" type="Node2D" unique_id=1302248953]
 script = ExtResource("1_sg33g")
 
 [node name="rover" type="CharacterBody2D" parent="." unique_id=632059954]
 
-[node name="Icon6" type="Sprite2D" parent="rover" unique_id=1084776154]
+[node name="roversin" type="AnimatedSprite2D" parent="rover" unique_id=894173336]
 position = Vector2(423, 365)
 scale = Vector2(1.2890626, 1.1289061)
-texture = ExtResource("2_73nba")
+sprite_frames = SubResource("SpriteFrames_w8wy8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="rover" unique_id=1888788141]
-position = Vector2(423, 366)
+position = Vector2(380.5, 472.5)
 shape = SubResource("RectangleShape2D_w8wy8")

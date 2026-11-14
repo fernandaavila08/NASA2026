@@ -15,6 +15,11 @@ run/main_scene="uid://is85k8tkcoto"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+frames_nave="*uid://d3aic767v6wc3"
+frames_rover="*uid://ra15rujmcslk"
+
 [display]
 
 window/stretch/mode="canvas_items"

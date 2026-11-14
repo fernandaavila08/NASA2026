@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://c806xnkp0iapr"]
 
 [ext_resource type="Script" uid="uid://c1oscnk3wbqdq" path="res://rover.gd" id="1_il8ej"]
+[ext_resource type="Texture2D" uid="uid://ca58057bdjr6c" path="res://bocetomision1.png" id="2_d4gi6"]
+[ext_resource type="PackedScene" uid="uid://2nsjykv2v1ck" path="res://roversito.tscn" id="3_7ff10"]
 
 [node name="rover" type="Control" unique_id=601954722]
 layout_mode = 3
@@ -11,6 +13,13 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_il8ej")
 
+[node name="Bocetomision1" type="Sprite2D" parent="." unique_id=1350224497]
+position = Vector2(577, 328)
+scale = Vector2(2.6697674, 4.75)
+texture = ExtResource("2_d4gi6")
+region_enabled = true
+region_rect = Rect2(2152, 256, 430, 136)
+
 [node name="regreso" type="Button" parent="." unique_id=1791776019]
 layout_mode = 0
 offset_left = 22.0
@@ -18,4 +27,23 @@ offset_top = 15.0
 offset_right = 88.0
 offset_bottom = 75.0
 
+[node name="roversito" parent="." unique_id=1302248953 instance=ExtResource("3_7ff10")]
+position = Vector2(177, -9)
+
+[node name="izq" type="Button" parent="." unique_id=501493622]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 200.0
+offset_right = 218.0
+offset_bottom = 359.0
+
+[node name="der" type="Button" parent="." unique_id=1456325431]
+layout_mode = 0
+offset_left = 954.0
+offset_top = 202.0
+offset_right = 1029.0
+offset_bottom = 370.0
+
 [connection signal="pressed" from="regreso" to="." method="_on_regreso_pressed"]
+[connection signal="pressed" from="izq" to="." method="_on_izq_pressed"]
+[connection signal="pressed" from="der" to="." method="_on_der_pressed"]

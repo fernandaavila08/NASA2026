@@ -1,16 +1,21 @@
 extends Control
 
+# Busca por nombre ("roversin") y por tipo ("AnimatedSprite2D")
+@onready var sprite_rover: AnimatedSprite2D = $roversito.find_children("roversin", "AnimatedSprite2D", true, false)[0]
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
-	pass # Replace with function body.
+	# Al entrar a la escena, carga el frame guardado y asegura que esté entre 0 y 3
+	sprite_rover.frame = clamp(frames_rover.frame_rover, 0, 3)
 
+func _on_izq_pressed() -> void:
+	sprite_rover.frame = clamp(sprite_rover.frame - 1, 0, 3)
+	frames_rover.guardar_frame(sprite_rover.frame)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_der_pressed() -> void:
+	sprite_rover.frame = clamp(sprite_rover.frame + 1, 0, 3)
+	frames_rover.guardar_frame(sprite_rover.frame)
 
 
 func _on_regreso_pressed() -> void:
 	get_tree().change_scene_to_file("res://mision2.tscn")
-	pass # Replace with function body.
