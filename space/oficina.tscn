@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://y2pgsw5uj2ri"]
+
+[ext_resource type="Texture2D" uid="uid://q62x5yus1iq4" path="res://oficina_default.jpg" id="1_qo6bi"]
+
+[node name="idk_oficina?" type="Control" unique_id=1252217503]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OficinaDefault" type="Sprite2D" parent="." unique_id=1745085584]
+position = Vector2(579, 372.75)
+scale = Vector2(1.8888891, 1.9314215)
+texture = ExtResource("1_qo6bi")

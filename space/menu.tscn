@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://is85k8tkcoto"]
+
+[ext_resource type="Texture2D" uid="uid://b7rcfnncwp8je" path="res://icon.svg" id="1_lti8b"]
+[ext_resource type="Script" uid="uid://cj5m5143ev378" path="res://menu.gd" id="1_ouk20"]
+
+[node name="menu" type="Control" unique_id=2120161090]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ouk20")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1809650958]
+position = Vector2(576, 324.5)
+scale = Vector2(9, 5.0703125)
+texture = ExtResource("1_lti8b")
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=1456394592]
+modulate = Color(0.31764707, 0.0627451, 1, 1)
+position = Vector2(256, 221.00002)
+scale = Vector2(2.4296877, 0.859375)
+texture = ExtResource("1_lti8b")
+
+[node name="Icon3" type="Sprite2D" parent="." unique_id=1154680734]
+modulate = Color(0.31764707, 0.0627451, 1, 1)
+position = Vector2(263, 349)
+scale = Vector2(2.4296877, 0.859375)
+texture = ExtResource("1_lti8b")
+
+[node name="Icon4" type="Sprite2D" parent="." unique_id=78523166]
+modulate = Color(0.31764707, 0.0627451, 1, 1)
+position = Vector2(254, 480)
+scale = Vector2(2.4296877, 0.859375)
+texture = ExtResource("1_lti8b")
+
+[node name="play" type="Button" parent="." unique_id=1787851676]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 169.0
+offset_right = 410.0
+offset_bottom = 275.0
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]

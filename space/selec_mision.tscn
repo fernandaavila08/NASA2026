@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dkaud1tejko12"]
+
+[ext_resource type="Texture2D" uid="uid://b7rcfnncwp8je" path="res://icon.svg" id="1_mfdfb"]
+[ext_resource type="Script" uid="uid://c3c3h1l8m8575" path="res://selec_mision.gd" id="1_vc28c"]
+
+[node name="selec_mision" type="Control" unique_id=17030850]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vc28c")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=255773176]
+position = Vector2(576.5, 324)
+scale = Vector2(8.9609375, 5.0625)
+texture = ExtResource("1_mfdfb")
+
+[node name="mision1" type="Sprite2D" parent="." unique_id=2101128428]
+position = Vector2(225.5, 150)
+scale = Vector2(1.7109375, 0.515625)
+texture = ExtResource("1_mfdfb")
+
+[node name="mision2" type="Sprite2D" parent="." unique_id=611716355]
+position = Vector2(555, 145.00002)
+scale = Vector2(1.7109375, 0.515625)
+texture = ExtResource("1_mfdfb")
+
+[node name="mision3" type="Sprite2D" parent="." unique_id=1964018965]
+position = Vector2(896, 149)
+scale = Vector2(1.7109375, 0.515625)
+texture = ExtResource("1_mfdfb")
+
+[node name="mision3desc" type="Sprite2D" parent="." unique_id=1551053970]
+position = Vector2(909.75, 394.49997)
+scale = Vector2(2.5664063, 2.742187)
+texture = ExtResource("1_mfdfb")
+
+[node name="mision2desc" type="Sprite2D" parent="." unique_id=1341016935]
+position = Vector2(574, 388)
+scale = Vector2(2.5664063, 2.742187)
+texture = ExtResource("1_mfdfb")
+
+[node name="mision1des" type="Sprite2D" parent="." unique_id=1523071930]
+position = Vector2(236, 386)
+scale = Vector2(2.5664063, 2.742187)
+texture = ExtResource("1_mfdfb")
+
+[node name="mision1_boton" type="Button" parent="." unique_id=1900056493]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 114.0
+offset_right = 338.0
+offset_bottom = 186.0
+
+[connection signal="pressed" from="mision1_boton" to="." method="_on_mision_1_boton_pressed"]
