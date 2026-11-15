@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b7m0owc8mcxlm"]
 
 [ext_resource type="Script" uid="uid://b3y22h8vxgfk1" path="res://mision_2.gd" id="1_62t6e"]
-[ext_resource type="Texture2D" uid="uid://ca58057bdjr6c" path="res://bocetomision1.png" id="1_ggdc3"]
+[ext_resource type="Texture2D" uid="uid://h6r4dp4gybyq" path="res://OFICINA.png" id="2_62t6e"]
 
 [node name="mision2" type="Control" unique_id=1541858817]
 layout_mode = 3
@@ -12,45 +12,48 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_62t6e")
 
-[node name="Bocetomision1" type="Sprite2D" parent="." unique_id=1925287409]
-position = Vector2(576.0748, 324.875)
-scale = Vector2(0.42990652, 0.39867365)
-texture = ExtResource("1_ggdc3")
+[node name="Oficina" type="Sprite2D" parent="." unique_id=659827543]
+position = Vector2(569.1111, 318.25)
+scale = Vector2(0.1877037, 0.1877037)
+texture = ExtResource("2_62t6e")
 
 [node name="nave2" type="Button" parent="." unique_id=62505080]
 layout_mode = 0
-offset_left = 732.0
-offset_top = 128.0
-offset_right = 892.0
-offset_bottom = 487.0
+offset_left = 863.0
+offset_top = 47.0
+offset_right = 1111.0
+offset_bottom = 230.0
 
 [node name="rover" type="Button" parent="." unique_id=1121888341]
 layout_mode = 0
-offset_left = 944.0
-offset_top = 165.0
-offset_right = 1105.0
-offset_bottom = 550.0
+offset_left = 867.0
+offset_top = 270.0
+offset_right = 1112.0
+offset_bottom = 481.0
 
 [node name="llegadaalaluna" type="Button" parent="." unique_id=144821712]
 layout_mode = 0
-offset_left = 403.0
-offset_top = 151.0
-offset_right = 662.0
-offset_bottom = 338.0
+offset_left = 350.0
+offset_top = 179.0
+offset_right = 803.0
+offset_bottom = 437.0
 
 [node name="orbitas" type="Button" parent="." unique_id=1714853568]
 layout_mode = 0
-offset_left = 66.0
-offset_top = 254.0
-offset_right = 325.0
-offset_bottom = 470.0
+offset_left = -435.0
+offset_top = 140.0
+offset_right = 98.80615
+offset_bottom = 355.96313
+rotation = -0.08593072
+scale = Vector2(0.8212944, 1.245533)
+pivot_offset = Vector2(1591.0538, 87.685135)
 
 [node name="launch" type="Button" parent="." unique_id=1908880649]
 layout_mode = 0
-offset_left = 446.0
-offset_top = 447.0
-offset_right = 645.0
-offset_bottom = 651.0
+offset_left = 157.0
+offset_top = 535.0
+offset_right = 264.0
+offset_bottom = 594.0
 
 [connection signal="pressed" from="nave2" to="." method="_on_nave_2_pressed"]
 [connection signal="pressed" from="rover" to="." method="_on_rover_pressed"]
