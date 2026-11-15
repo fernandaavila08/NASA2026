@@ -2,6 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://cf0tics8epfsv" path="res://piso-lunar.jpg" id="1_0h168"]
 [ext_resource type="Texture2D" uid="uid://cohtp6g2lguqu" path="res://Conpu-Boceto.png" id="2_nm6sm"]
+[ext_resource type="PackedScene" uid="uid://2nsjykv2v1ck" path="res://roversito.tscn" id="3_nm6sm"]
+[ext_resource type="Texture2D" uid="uid://thqooawetf6v" path="res://piedralunar.webp" id="4_pdosi"]
+[ext_resource type="Script" uid="uid://sqdb8qh65cy8" path="res://punto_interes.gd" id="4_t2530"]
+[ext_resource type="Texture2D" uid="uid://dmvh42affuup1" path="res://punto-interes.png" id="5_e0yby"]
+[ext_resource type="Script" uid="uid://ct38it72fou1o" path="res://roversito.gd" id="7_jfxun"]
+[ext_resource type="Script" uid="uid://7gu3bbkr4148" path="res://hud.gd" id="8_lkeu6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8wy8"]
 size = Vector2(28, 495)
@@ -14,6 +20,18 @@ size = Vector2(822, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qslr8"]
 size = Vector2(840, 71.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p3vuq"]
+size = Vector2(1176.2593, 775.737)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fo2p"]
+size = Vector2(137.5, 87)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p3vuq"]
+radius = 21.633308
+
+[sub_resource type="LabelSettings" id="LabelSettings_0fo2p"]
+font_size = 11
 
 [node name="POSTN2" type="Node2D" unique_id=1775720337]
 
@@ -29,20 +47,79 @@ texture = ExtResource("2_nm6sm")
 region_enabled = true
 region_rect = Rect2(346, 50, 1165, 1022)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1941457979]
+[node name="Limites" type="StaticBody2D" parent="." unique_id=1941457979]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=839634718]
+[node name="Pared-Izq" type="CollisionShape2D" parent="Limites" unique_id=839634718]
 position = Vector2(162, 261)
 shape = SubResource("RectangleShape2D_w8wy8")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1114797217]
+[node name="Pared-Der" type="CollisionShape2D" parent="Limites" unique_id=1114797217]
 position = Vector2(983, 261)
 shape = SubResource("RectangleShape2D_choid")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1287490204]
+[node name="Pared-Arr" type="CollisionShape2D" parent="Limites" unique_id=1287490204]
 position = Vector2(573, 23)
 shape = SubResource("RectangleShape2D_2mvk3")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1162367709]
+[node name="Pared-Aba" type="CollisionShape2D" parent="Limites" unique_id=1162367709]
 position = Vector2(576, 474.25)
 shape = SubResource("RectangleShape2D_qslr8")
+
+[node name="Piedra1" type="StaticBody2D" parent="." unique_id=964372833 groups=["obstaculos"]]
+
+[node name="Piedralunar" type="Sprite2D" parent="Piedra1" unique_id=1373004318]
+position = Vector2(524.00006, 133.99997)
+scale = Vector2(0.113979846, 0.09798432)
+texture = ExtResource("4_pdosi")
+
+[node name="Piedra1" type="CollisionShape2D" parent="Piedra1" unique_id=1320571592]
+position = Vector2(533, 134)
+scale = Vector2(0.113979846, 0.09798432)
+shape = SubResource("RectangleShape2D_p3vuq")
+
+[node name="Piedra2" type="StaticBody2D" parent="." unique_id=248017864 groups=["obstaculos"]]
+position = Vector2(533, 134)
+scale = Vector2(0.113979846, 0.09798432)
+
+[node name="Piedralunar2" type="Sprite2D" parent="Piedra2" unique_id=1668518470]
+position = Vector2(-1237.061, 1867.6458)
+texture = ExtResource("4_pdosi")
+
+[node name="Piedra2" type="CollisionShape2D" parent="Piedra2" unique_id=1910193918]
+position = Vector2(-1164.6797, 1847.2344)
+scale = Vector2(8.773481, 10.205714)
+shape = SubResource("RectangleShape2D_0fo2p")
+
+[node name="PuntoInteres" type="Area2D" parent="." unique_id=1187874646]
+position = Vector2(830, 380)
+script = ExtResource("4_t2530")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuntoInteres" unique_id=1835391325]
+shape = SubResource("CircleShape2D_p3vuq")
+
+[node name="PuntoInteres" type="Sprite2D" parent="PuntoInteres" unique_id=1337097061]
+position = Vector2(0, 1)
+scale = Vector2(0.07128902, 0.07128902)
+texture = ExtResource("5_e0yby")
+
+[node name="Label" type="Label" parent="PuntoInteres" unique_id=436495896]
+visible = false
+offset_left = -44.99994
+offset_top = 18.0
+offset_right = 52.00006
+offset_bottom = 34.0
+text = "Press E to interact"
+label_settings = SubResource("LabelSettings_0fo2p")
+
+[node name="roversito" parent="." unique_id=1302248953 instance=ExtResource("3_nm6sm")]
+position = Vector2(199, 59)
+scale = Vector2(0.10257776, 0.10257776)
+script = ExtResource("7_jfxun")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1874400880]
+script = ExtResource("8_lkeu6")
+
+[node name="BarraIntegridad" type="ProgressBar" parent="HUD" unique_id=1810225944]
+offset_right = 220.0
+offset_bottom = 27.0
+value = 100.0

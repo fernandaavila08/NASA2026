@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://2nsjykv2v1ck"]
 
+[ext_resource type="Script" uid="uid://c5o7g6vpajnaq" path="res://movimiento-rover.gd" id="1_sg33g"]
 [ext_resource type="Texture2D" uid="uid://doy8b84csoax8" path="res://roversquad.png" id="2_sg33g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_73nba"]
@@ -39,11 +40,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8wy8"]
-size = Vector2(525, 165)
+size = Vector2(525, 499)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p3vuq"]
+radius = 293.1092
 
 [node name="roversito" type="Node2D" unique_id=1302248953]
 
 [node name="rover" type="CharacterBody2D" parent="." unique_id=632059954]
+script = ExtResource("1_sg33g")
 
 [node name="roversin" type="AnimatedSprite2D" parent="rover" unique_id=894173336]
 position = Vector2(423, 365)
@@ -51,5 +56,11 @@ scale = Vector2(1.2890626, 1.1289061)
 sprite_frames = SubResource("SpriteFrames_w8wy8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="rover" unique_id=1888788141]
-position = Vector2(380.5, 472.5)
+position = Vector2(391, 302)
 shape = SubResource("RectangleShape2D_w8wy8")
+
+[node name="DetectorChoque" type="Area2D" parent="rover" unique_id=2086319927]
+position = Vector2(394, 297)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rover/DetectorChoque" unique_id=2092714975]
+shape = SubResource("CircleShape2D_p3vuq")
