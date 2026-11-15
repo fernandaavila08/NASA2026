@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://2nsjykv2v1ck"]
 
-[ext_resource type="Script" uid="uid://ct38it72fou1o" path="res://roversito.gd" id="1_sg33g"]
 [ext_resource type="Texture2D" uid="uid://doy8b84csoax8" path="res://roversquad.png" id="2_sg33g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_73nba"]
@@ -43,7 +42,6 @@ animations = [{
 size = Vector2(525, 165)
 
 [node name="roversito" type="Node2D" unique_id=1302248953]
-script = ExtResource("1_sg33g")
 
 [node name="rover" type="CharacterBody2D" parent="." unique_id=632059954]
 
