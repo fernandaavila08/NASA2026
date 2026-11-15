@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ce562hiavca6x"]
+
+[ext_resource type="VideoStream" uid="uid://bwjb2edscxs1g" path="res://generate_video_01.ogv" id="1_75knv"]
+[ext_resource type="Script" uid="uid://w7qmtftnyo7b" path="res://video_despeje.gd" id="1_w3nwc"]
+
+[node name="video despeje" type="Control" unique_id=932380901]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w3nwc")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=616127507]
+layout_mode = 0
+offset_right = 1140.0
+offset_bottom = 649.0
+stream = ExtResource("1_75knv")
+autoplay = true
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

@@ -44,4 +44,31 @@ scale = Vector2(3, 3)
 text = "SELECT THE MISION
 GRRR"
 
+[node name="mission1" type="Button" parent="." unique_id=770477746]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 106.0
+offset_right = 375.0
+offset_bottom = 647.0
+
+[node name="mission2" type="Button" parent="." unique_id=854300694]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.007
+anchor_bottom = 0.012
+offset_left = 414.0
+offset_top = 108.0
+offset_right = 750.936
+offset_bottom = 636.224
+
+[node name="mission3" type="Button" parent="." unique_id=48303160]
+layout_mode = 0
+offset_left = 781.0
+offset_top = 106.0
+offset_right = 1135.0
+offset_bottom = 641.0
+
 [connection signal="pressed" from="regreso" to="." method="_on_regreso_pressed"]
+[connection signal="pressed" from="mission1" to="." method="_on_mission_1_pressed"]
+[connection signal="pressed" from="mission2" to="." method="_on_mission_2_pressed"]
+[connection signal="pressed" from="mission3" to="." method="_on_mission_3_pressed"]

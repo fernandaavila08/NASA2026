@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 frames_nave="*uid://d3aic767v6wc3"
 frames_rover="*uid://ra15rujmcslk"
+Misionextra="*uid://eos5w28f4e0e"
 
 [display]
 
