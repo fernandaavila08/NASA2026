@@ -22,10 +22,10 @@ size = Vector2(822, 36)
 size = Vector2(840, 71.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p3vuq"]
-size = Vector2(1176.2593, 775.737)
+size = Vector2(1184.7264, 857.27997)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fo2p"]
-size = Vector2(137.5, 87)
+size = Vector2(130.5, 81.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p3vuq"]
 radius = 21.633308
@@ -73,7 +73,7 @@ scale = Vector2(0.113979846, 0.09798432)
 texture = ExtResource("4_pdosi")
 
 [node name="Piedra1" type="CollisionShape2D" parent="Piedra1" unique_id=1320571592]
-position = Vector2(533, 134)
+position = Vector2(532.51746, 133)
 scale = Vector2(0.113979846, 0.09798432)
 shape = SubResource("RectangleShape2D_p3vuq")
 
@@ -86,7 +86,20 @@ position = Vector2(-1237.061, 1867.6458)
 texture = ExtResource("4_pdosi")
 
 [node name="Piedra2" type="CollisionShape2D" parent="Piedra2" unique_id=1910193918]
-position = Vector2(-1164.6797, 1847.2344)
+position = Vector2(-1195.387, 1875.3)
+scale = Vector2(8.773481, 10.205714)
+shape = SubResource("RectangleShape2D_0fo2p")
+
+[node name="Piedra3" type="StaticBody2D" parent="." unique_id=286209205 groups=["obstaculos"]]
+position = Vector2(988.00006, 67)
+scale = Vector2(0.113979846, 0.09798432)
+
+[node name="Piedralunar3" type="Sprite2D" parent="Piedra3" unique_id=1593508935]
+position = Vector2(-1237.061, 1867.6458)
+texture = ExtResource("4_pdosi")
+
+[node name="Piedra3" type="CollisionShape2D" parent="Piedra3" unique_id=1720218513]
+position = Vector2(-1195.387, 1875.3)
 scale = Vector2(8.773481, 10.205714)
 shape = SubResource("RectangleShape2D_0fo2p")
 
@@ -119,7 +132,92 @@ script = ExtResource("7_jfxun")
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1874400880]
 script = ExtResource("8_lkeu6")
 
-[node name="BarraIntegridad" type="ProgressBar" parent="HUD" unique_id=1810225944]
-offset_right = 220.0
-offset_bottom = 27.0
+[node name="PanelObjetivos" type="PanelContainer" parent="HUD" unique_id=70946289]
+anchors_preset = -1
+offset_left = 20.0
+offset_top = 60.0
+offset_right = 280.0
+offset_bottom = 280.0
+
+[node name="ContenidoObjetivos" type="VBoxContainer" parent="HUD/PanelObjetivos" unique_id=792670452]
+layout_mode = 2
+
+[node name="TituloObjetivos" type="Label" parent="HUD/PanelObjetivos/ContenidoObjetivos" unique_id=787244107]
+layout_mode = 2
+text = "OBJETIVOS DE MISIÓN"
+
+[node name="NombreMision" type="Label" parent="HUD/PanelObjetivos/ContenidoObjetivos" unique_id=1022802092]
+layout_mode = 2
+text = "	Misión en curso"
+
+[node name="Objetivo1" type="Label" parent="HUD/PanelObjetivos/ContenidoObjetivos" unique_id=1558555087]
+layout_mode = 2
+text = "○ Explorar el área"
+
+[node name="Objetivo2" type="Label" parent="HUD/PanelObjetivos/ContenidoObjetivos" unique_id=792507194]
+layout_mode = 2
+text = "	○ Completar análisis"
+
+[node name="Objetivo3" type="Label" parent="HUD/PanelObjetivos/ContenidoObjetivos" unique_id=1688149419]
+layout_mode = 2
+text = "	○ Registrar resultados"
+
+[node name="PanelEstadoRover" type="PanelContainer" parent="HUD" unique_id=1214031820]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -280.0
+offset_top = 60.0
+offset_right = -20.0
+offset_bottom = 300.0
+grow_horizontal = 0
+
+[node name="ContenidoEstado" type="VBoxContainer" parent="HUD/PanelEstadoRover" unique_id=1486089475]
+layout_mode = 2
+
+[node name="TituloEstado" type="Label" parent="HUD/PanelEstadoRover/ContenidoEstado" unique_id=1665108263]
+layout_mode = 2
+text = "ESTADO DEL ROVER"
+
+[node name="BarraIntegridad" type="ProgressBar" parent="HUD/PanelEstadoRover/ContenidoEstado" unique_id=1810225944]
+layout_mode = 2
 value = 100.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextoIntegridad" type="Label" parent="HUD/PanelEstadoRover/ContenidoEstado" unique_id=1196277749]
+layout_mode = 2
+text = "	Estructura: 100%"
+
+[node name="TextoBateria" type="Label" parent="HUD/PanelEstadoRover/ContenidoEstado" unique_id=1219983397]
+layout_mode = 2
+text = "	Batería: Pendiente"
+
+[node name="TextoComunicaciones" type="Label" parent="HUD/PanelEstadoRover/ContenidoEstado" unique_id=1850603310]
+layout_mode = 2
+text = "	Comunicaciones: Pendiente"
+
+[node name="TextoAlmacenamiento" type="Label" parent="HUD/PanelEstadoRover/ContenidoEstado" unique_id=1598554892]
+layout_mode = 2
+text = "	Almacenamiento: Pendiente"
+
+[node name="TextoTiempo" type="Label" parent="HUD/PanelEstadoRover/ContenidoEstado" unique_id=442706088]
+layout_mode = 2
+text = "	Tiempo restante: Pendiente"
+
+[node name="PanelDerrota" type="PanelContainer" parent="HUD" unique_id=1858496501]
+visible = false
+offset_left = 391.0
+offset_top = 225.0
+offset_right = 748.0
+offset_bottom = 283.0
+
+[node name="Contenido" type="VBoxContainer" parent="HUD/PanelDerrota" unique_id=1470956940]
+layout_mode = 2
+
+[node name="Titulo" type="Label" parent="HUD/PanelDerrota/Contenido" unique_id=2102521655]
+layout_mode = 2
+text = "MISIÓN FALLIDA — ROVER FUERA DE SERVICIO"
+
+[node name="BotonReintentar" type="Button" parent="HUD/PanelDerrota/Contenido" unique_id=67269622]
+layout_mode = 2
+text = "Reintentar misión"

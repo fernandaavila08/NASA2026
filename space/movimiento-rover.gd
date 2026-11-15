@@ -1,5 +1,6 @@
 
 extends CharacterBody2D
+signal mision_fallida
 
 var integridad_estructural: float = 100.0
 @export var dano_por_choque: float = 10.0
@@ -30,6 +31,10 @@ func _al_chocar(body: Node2D) -> void:
 
 		print("¡Choque detectado!")
 		print("Integridad estructural: ", integridad_estructural, "%")
-		
+
+		if integridad_estructural <= 0:
+			set_physics_process(false)
+			mision_fallida.emit()
+			
 func obtener_integridad() -> float:
 	return integridad_estructural
