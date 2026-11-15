@@ -1,0 +1,189 @@
+[gd_scene format=3 uid="uid://ct3mjt3tptj3j"]
+
+[ext_resource type="Texture2D" uid="uid://ca58057bdjr6c" path="res://bocetomision1.png" id="1_g84te"]
+[ext_resource type="Script" uid="uid://0uj7mvhjbo8f" path="res://navesita_2_0.gd" id="1_ydh8r"]
+[ext_resource type="Texture2D" uid="uid://cv4p3btnq5if4" path="res://Ilustración_sin_título-1.png" id="2_ydh8r"]
+[ext_resource type="Texture2D" uid="uid://cdq5jlqoms07k" path="res://Ilustración_sin_título-2.png" id="3_yguds"]
+[ext_resource type="Texture2D" uid="uid://dgjjpnip4jele" path="res://Ilustración_sin_título-3.png" id="4_uvdvo"]
+[ext_resource type="Texture2D" uid="uid://bwb746wef4wmc" path="res://Ilustración_sin_título-4.png" id="5_xrcwm"]
+[ext_resource type="Texture2D" uid="uid://b7lidcyec15es" path="res://Ilustración_sin_título-5.png" id="6_6oxts"]
+[ext_resource type="Texture2D" uid="uid://bs5dqh873b6u6" path="res://Ilustración_sin_título-6.png" id="7_mk78q"]
+[ext_resource type="Texture2D" uid="uid://bjlpvnhmww38n" path="res://Ilustración_sin_título-7.png" id="8_8t02q"]
+[ext_resource type="Texture2D" uid="uid://dxrdxnsrp0imt" path="res://Ilustración_sin_título-8.png" id="9_jxnyy"]
+[ext_resource type="Texture2D" uid="uid://dtg7wuoym6u4i" path="res://Ilustración_sin_título-9.png" id="10_alohf"]
+[ext_resource type="Texture2D" uid="uid://dlkhqo0djy2qn" path="res://Ilustración_sin_título-10.png" id="11_wh30m"]
+[ext_resource type="Texture2D" uid="uid://cocflhep4ge61" path="res://Ilustración_sin_título-11.png" id="12_kt0aq"]
+[ext_resource type="Texture2D" uid="uid://dosla8xjqcwfg" path="res://Ilustración_sin_título-12.png" id="13_aj5pv"]
+[ext_resource type="Texture2D" uid="uid://sdk4pq8gvebk" path="res://Ilustración_sin_título-13.png" id="14_hxq3a"]
+[ext_resource type="Texture2D" uid="uid://dx5ptegcfd8m2" path="res://Ilustración_sin_título-14.png" id="15_a8kbn"]
+
+[node name="navesita2_0" type="Control" unique_id=318361441]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ydh8r")
+
+[node name="Bocetomision1" type="Sprite2D" parent="." unique_id=212442048]
+position = Vector2(576.99994, 323)
+scale = Vector2(2.6697674, 4.75)
+texture = ExtResource("1_g84te")
+region_enabled = true
+region_rect = Rect2(2152, 256, 430, 136)
+
+[node name="base" type="Sprite2D" parent="." unique_id=1185512768]
+position = Vector2(561, 322)
+scale = Vector2(0.24070022, 0.24070024)
+texture = ExtResource("2_ydh8r")
+
+[node name="p3" type="Sprite2D" parent="." unique_id=1662276930]
+visible = false
+position = Vector2(564, 296)
+scale = Vector2(0.241, 0.241)
+texture = ExtResource("3_yguds")
+
+[node name="p1" type="Sprite2D" parent="." unique_id=355913741]
+position = Vector2(567.00006, 298)
+scale = Vector2(0.241, 0.241)
+texture = ExtResource("4_uvdvo")
+
+[node name="p2" type="Sprite2D" parent="." unique_id=128258309]
+visible = false
+position = Vector2(563, 326)
+scale = Vector2(0.241, 0.241)
+texture = ExtResource("5_xrcwm")
+
+[node name="c1" type="Sprite2D" parent="." unique_id=1292701455]
+position = Vector2(562, 284)
+scale = Vector2(0.241, 0.241)
+texture = ExtResource("6_6oxts")
+
+[node name="c2" type="Sprite2D" parent="." unique_id=246129966]
+visible = false
+position = Vector2(562, 274)
+scale = Vector2(0.241, 0.241)
+texture = ExtResource("7_mk78q")
+
+[node name="c3" type="Sprite2D" parent="." unique_id=1905574468]
+visible = false
+position = Vector2(566.00006, 268.00003)
+scale = Vector2(0.241, 0.241)
+texture = ExtResource("8_8t02q")
+
+[node name="pl2" type="Sprite2D" parent="." unique_id=585089121]
+visible = false
+position = Vector2(564, 305.00006)
+scale = Vector2(0.241, 0.241)
+texture = ExtResource("9_jxnyy")
+
+[node name="pl1" type="Sprite2D" parent="." unique_id=1202996871]
+position = Vector2(565, 303.00006)
+scale = Vector2(0.241, 0.241)
+texture = ExtResource("10_alohf")
+
+[node name="pl3" type="Sprite2D" parent="." unique_id=960863416]
+visible = false
+position = Vector2(560.00006, 297.00003)
+scale = Vector2(0.241, 0.241)
+texture = ExtResource("11_wh30m")
+
+[node name="t1" type="Sprite2D" parent="." unique_id=1248237776]
+position = Vector2(559, 324)
+scale = Vector2(0.241, 0.241)
+texture = ExtResource("12_kt0aq")
+
+[node name="t2" type="Sprite2D" parent="." unique_id=1266798667]
+visible = false
+position = Vector2(564, 318)
+scale = Vector2(0.241, 0.241)
+texture = ExtResource("13_aj5pv")
+
+[node name="t3" type="Sprite2D" parent="." unique_id=599501633]
+visible = false
+position = Vector2(563, 313.00006)
+scale = Vector2(0.241, 0.241)
+texture = ExtResource("14_hxq3a")
+
+[node name="t4" type="Sprite2D" parent="." unique_id=1990928414]
+visible = false
+position = Vector2(559.00006, 301.00006)
+scale = Vector2(0.241, 0.241)
+texture = ExtResource("15_a8kbn")
+
+[node name="tizq" type="Button" parent="." unique_id=2023396245]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 48.0
+offset_right = 375.0
+offset_bottom = 112.0
+
+[node name="izq2" type="Button" parent="." unique_id=1739542374]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 151.0
+offset_right = 375.0
+offset_bottom = 215.0
+
+[node name="izq3" type="Button" parent="." unique_id=443211647]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 290.0
+offset_right = 377.0
+offset_bottom = 354.0
+
+[node name="izq4" type="Button" parent="." unique_id=2060541439]
+layout_mode = 0
+offset_left = 348.0
+offset_top = 434.0
+offset_right = 381.0
+offset_bottom = 498.0
+
+[node name="tder" type="Button" parent="." unique_id=643273503]
+layout_mode = 0
+offset_left = 721.0
+offset_top = 44.0
+offset_right = 754.0
+offset_bottom = 108.0
+
+[node name="der2" type="Button" parent="." unique_id=1790693473]
+layout_mode = 0
+offset_left = 721.0
+offset_top = 151.0
+offset_right = 754.0
+offset_bottom = 215.0
+
+[node name="der3" type="Button" parent="." unique_id=1085768988]
+layout_mode = 0
+offset_left = 721.0
+offset_top = 290.0
+offset_right = 754.0
+offset_bottom = 354.0
+
+[node name="der4" type="Button" parent="." unique_id=1218806450]
+layout_mode = 0
+offset_left = 721.0
+offset_top = 434.0
+offset_right = 754.0
+offset_bottom = 498.0
+
+[node name="regreso" type="Button" parent="." unique_id=2008449662]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.039
+anchor_bottom = 0.059000004
+offset_left = 28.0
+offset_top = 19.0
+offset_right = 28.071999
+offset_bottom = 18.767998
+
+[connection signal="pressed" from="tizq" to="." method="_on_tizq_pressed"]
+[connection signal="pressed" from="izq2" to="." method="_on_izq_2_pressed"]
+[connection signal="pressed" from="izq3" to="." method="_on_izq_3_pressed"]
+[connection signal="pressed" from="izq4" to="." method="_on_izq_4_pressed"]
+[connection signal="pressed" from="tder" to="." method="_on_tder_pressed"]
+[connection signal="pressed" from="der2" to="." method="_on_der_2_pressed"]
+[connection signal="pressed" from="der3" to="." method="_on_der_3_pressed"]
+[connection signal="pressed" from="der4" to="." method="_on_der_4_pressed"]
+[connection signal="pressed" from="regreso" to="." method="_on_regreso_pressed"]
