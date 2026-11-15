@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_orbitas_pressed() -> void:
-	get_tree().change_scene_to_file("res://lanzamiento.tscn")
+	get_tree().change_scene_to_file("res://entradaorbita.tscn")
 
 	pass # Replace with function body.
 
