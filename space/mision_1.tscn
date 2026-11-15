@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dji7exid712p8"]
 
 [ext_resource type="Texture2D" uid="uid://ca1eb8i6haeai" path="res://cohete.jpg" id="1_levwk"]
+[ext_resource type="Script" uid="uid://c2685di1fo8b2" path="res://mision_1.gd" id="1_rusdn"]
 [ext_resource type="Texture2D" uid="uid://h6r4dp4gybyq" path="res://OFICINA.png" id="2_rusdn"]
 
 [node name="mision1" type="Control" unique_id=277434645]
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_rusdn")
 
 [node name="Cohete" type="Sprite2D" parent="." unique_id=1604317626]
 position = Vector2(577, -13.0000305)
@@ -22,3 +24,13 @@ region_rect = Rect2(0, 0, 1365, 632)
 position = Vector2(572.38885, 324.375)
 scale = Vector2(0.18953703, 0.19296297)
 texture = ExtResource("2_rusdn")
+
+[node name="Button" type="Button" parent="." unique_id=515002571]
+layout_mode = 0
+offset_left = -240.1399
+offset_top = 335.27344
+offset_right = 294.19592
+offset_bottom = 582.27344
+rotation = -0.25763032
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
