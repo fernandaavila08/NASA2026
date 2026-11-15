@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://corxncq6ksr3"]
 
 [ext_resource type="Texture2D" uid="uid://cf0tics8epfsv" path="res://piso-lunar.jpg" id="1_0h168"]
-[ext_resource type="Texture2D" uid="uid://cohtp6g2lguqu" path="res://Conpu-Boceto.png" id="2_nm6sm"]
+[ext_resource type="Texture2D" uid="uid://c4dhj6jjcr7qh" path="res://Postlanzamiento.png" id="1_lkeu6"]
+[ext_resource type="Texture2D" uid="uid://ijo4mp3shccb" path="res://PiedraLunar.png" id="2_lkeu6"]
 [ext_resource type="PackedScene" uid="uid://2nsjykv2v1ck" path="res://roversito.tscn" id="3_nm6sm"]
-[ext_resource type="Texture2D" uid="uid://thqooawetf6v" path="res://piedralunar.webp" id="4_pdosi"]
+[ext_resource type="Texture2D" uid="uid://xj5tqonrcwt4" path="res://PuntoInteres.png" id="4_lkeu6"]
 [ext_resource type="Script" uid="uid://sqdb8qh65cy8" path="res://punto_interes.gd" id="4_t2530"]
-[ext_resource type="Texture2D" uid="uid://dmvh42affuup1" path="res://punto-interes.png" id="5_e0yby"]
 [ext_resource type="Script" uid="uid://ct38it72fou1o" path="res://roversito.gd" id="7_jfxun"]
 [ext_resource type="Script" uid="uid://7gu3bbkr4148" path="res://hud.gd" id="8_lkeu6"]
 
@@ -13,19 +13,22 @@
 size = Vector2(28, 495)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_choid"]
-size = Vector2(34, 508)
+size = Vector2(34, 571)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2mvk3"]
-size = Vector2(822, 36)
+size = Vector2(1021, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qslr8"]
-size = Vector2(840, 71.5)
+size = Vector2(939, 32.75)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_p3vuq"]
-size = Vector2(1184.7264, 857.27997)
+[sub_resource type="CircleShape2D" id="CircleShape2D_lkeu6"]
+radius = 456.95563
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fo2p"]
-size = Vector2(130.5, 81.5)
+[sub_resource type="CircleShape2D" id="CircleShape2D_dqlns"]
+radius = 47.598583
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jyelc"]
+radius = 61.164707
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p3vuq"]
 radius = 21.633308
@@ -36,86 +39,116 @@ font_size = 11
 [node name="POSTN2" type="Node2D" unique_id=1775720337]
 
 [node name="PisoLunar" type="Sprite2D" parent="." unique_id=456756901]
-position = Vector2(574, 242.00002)
-scale = Vector2(0.65666664, 0.5301205)
+position = Vector2(632, 311.5)
+scale = Vector2(0.7333333, 0.6840696)
 texture = ExtResource("1_0h168")
-
-[node name="ConpuBoceto" type="Sprite2D" parent="." unique_id=1605979374]
-position = Vector2(572, 321)
-scale = Vector2(0.7350992, 0.618004)
-texture = ExtResource("2_nm6sm")
-region_enabled = true
-region_rect = Rect2(346, 50, 1165, 1022)
 
 [node name="Limites" type="StaticBody2D" parent="." unique_id=1941457979]
 
 [node name="Pared-Izq" type="CollisionShape2D" parent="Limites" unique_id=839634718]
-position = Vector2(162, 261)
+position = Vector2(181, 337)
 shape = SubResource("RectangleShape2D_w8wy8")
 
 [node name="Pared-Der" type="CollisionShape2D" parent="Limites" unique_id=1114797217]
-position = Vector2(983, 261)
+position = Vector2(1092, 313.5)
 shape = SubResource("RectangleShape2D_choid")
 
 [node name="Pared-Arr" type="CollisionShape2D" parent="Limites" unique_id=1287490204]
-position = Vector2(573, 23)
+position = Vector2(595.5, 32.5)
 shape = SubResource("RectangleShape2D_2mvk3")
 
 [node name="Pared-Aba" type="CollisionShape2D" parent="Limites" unique_id=1162367709]
-position = Vector2(576, 474.25)
+position = Vector2(636.5, 588.625)
 shape = SubResource("RectangleShape2D_qslr8")
 
 [node name="Piedra1" type="StaticBody2D" parent="." unique_id=964372833 groups=["obstaculos"]]
 
-[node name="Piedralunar" type="Sprite2D" parent="Piedra1" unique_id=1373004318]
-position = Vector2(524.00006, 133.99997)
-scale = Vector2(0.113979846, 0.09798432)
-texture = ExtResource("4_pdosi")
+[node name="PiedraLunar" type="Sprite2D" parent="Piedra1" unique_id=289843439]
+position = Vector2(532, 133)
+scale = Vector2(0.0633831, 0.06347197)
+texture = ExtResource("2_lkeu6")
 
 [node name="Piedra1" type="CollisionShape2D" parent="Piedra1" unique_id=1320571592]
 position = Vector2(532.51746, 133)
 scale = Vector2(0.113979846, 0.09798432)
-shape = SubResource("RectangleShape2D_p3vuq")
+shape = SubResource("CircleShape2D_lkeu6")
 
 [node name="Piedra2" type="StaticBody2D" parent="." unique_id=248017864 groups=["obstaculos"]]
 position = Vector2(533, 134)
 scale = Vector2(0.113979846, 0.09798432)
 
-[node name="Piedralunar2" type="Sprite2D" parent="Piedra2" unique_id=1668518470]
-position = Vector2(-1237.061, 1867.6458)
-texture = ExtResource("4_pdosi")
+[node name="PiedraLunar" type="Sprite2D" parent="Piedra2" unique_id=877547461]
+position = Vector2(-1219.514, 1867.6458)
+scale = Vector2(0.528956, 0.528956)
+texture = ExtResource("2_lkeu6")
 
 [node name="Piedra2" type="CollisionShape2D" parent="Piedra2" unique_id=1910193918]
-position = Vector2(-1195.387, 1875.3)
+position = Vector2(-1230.4807, 1875.2998)
 scale = Vector2(8.773481, 10.205714)
-shape = SubResource("RectangleShape2D_0fo2p")
+shape = SubResource("CircleShape2D_dqlns")
 
 [node name="Piedra3" type="StaticBody2D" parent="." unique_id=286209205 groups=["obstaculos"]]
 position = Vector2(988.00006, 67)
 scale = Vector2(0.113979846, 0.09798432)
 
-[node name="Piedralunar3" type="Sprite2D" parent="Piedra3" unique_id=1593508935]
-position = Vector2(-1237.061, 1867.6458)
-texture = ExtResource("4_pdosi")
+[node name="PiedraLunar" type="Sprite2D" parent="Piedra3" unique_id=152317356]
+position = Vector2(-1219.514, 1867.6458)
+scale = Vector2(0.8075065, 0.8075065)
+texture = ExtResource("2_lkeu6")
 
 [node name="Piedra3" type="CollisionShape2D" parent="Piedra3" unique_id=1720218513]
 position = Vector2(-1195.387, 1875.3)
 scale = Vector2(8.773481, 10.205714)
-shape = SubResource("RectangleShape2D_0fo2p")
+shape = SubResource("CircleShape2D_jyelc")
 
-[node name="PuntoInteres" type="Area2D" parent="." unique_id=1187874646]
+[node name="Piedra4" type="StaticBody2D" parent="." unique_id=568992415 groups=["obstaculos"]]
+position = Vector2(762.00006, 302)
+scale = Vector2(0.113979846, 0.09798432)
+
+[node name="PiedraLunar" type="Sprite2D" parent="Piedra4" unique_id=376159969]
+position = Vector2(-1219.514, 1867.6458)
+scale = Vector2(0.8075065, 0.8075065)
+texture = ExtResource("2_lkeu6")
+
+[node name="Piedra4" type="CollisionShape2D" parent="Piedra4" unique_id=1400634124]
+position = Vector2(-1195.387, 1875.3)
+scale = Vector2(8.773481, 10.205714)
+shape = SubResource("CircleShape2D_jyelc")
+
+[node name="PuntoInteres1" type="Area2D" parent="." unique_id=1187874646]
 position = Vector2(830, 380)
 script = ExtResource("4_t2530")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PuntoInteres" unique_id=1835391325]
+[node name="PuntoInteres1" type="Sprite2D" parent="PuntoInteres1" unique_id=1317295670]
+position = Vector2(-1.000061, 1.0000305)
+scale = Vector2(0.062499948, 0.06249994)
+texture = ExtResource("4_lkeu6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuntoInteres1" unique_id=1835391325]
 shape = SubResource("CircleShape2D_p3vuq")
 
-[node name="PuntoInteres" type="Sprite2D" parent="PuntoInteres" unique_id=1337097061]
-position = Vector2(0, 1)
-scale = Vector2(0.07128902, 0.07128902)
-texture = ExtResource("5_e0yby")
+[node name="Label" type="Label" parent="PuntoInteres1" unique_id=436495896]
+visible = false
+offset_left = -44.99994
+offset_top = 18.0
+offset_right = 52.00006
+offset_bottom = 34.0
+text = "Press E to interact"
+label_settings = SubResource("LabelSettings_0fo2p")
 
-[node name="Label" type="Label" parent="PuntoInteres" unique_id=436495896]
+[node name="PuntoInteres2" type="Area2D" parent="." unique_id=191023958]
+position = Vector2(288, 504)
+script = ExtResource("4_t2530")
+
+[node name="PuntoInteres1" type="Sprite2D" parent="PuntoInteres2" unique_id=61239609]
+position = Vector2(-1.000061, 1.0000305)
+scale = Vector2(0.062499948, 0.06249994)
+texture = ExtResource("4_lkeu6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuntoInteres2" unique_id=950321787]
+shape = SubResource("CircleShape2D_p3vuq")
+
+[node name="Label" type="Label" parent="PuntoInteres2" unique_id=1718540128]
 visible = false
 offset_left = -44.99994
 offset_top = 18.0
@@ -125,9 +158,15 @@ text = "Press E to interact"
 label_settings = SubResource("LabelSettings_0fo2p")
 
 [node name="roversito" parent="." unique_id=1302248953 instance=ExtResource("3_nm6sm")]
-position = Vector2(199, 59)
+position = Vector2(289, 84)
 scale = Vector2(0.10257776, 0.10257776)
 script = ExtResource("7_jfxun")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=274505624]
+offset_right = 6000.0
+offset_bottom = 3375.0
+scale = Vector2(0.19562724, 0.19562724)
+texture = ExtResource("1_lkeu6")
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1874400880]
 script = ExtResource("8_lkeu6")
@@ -140,6 +179,9 @@ offset_right = 280.0
 offset_bottom = 280.0
 
 [node name="ContenidoObjetivos" type="VBoxContainer" parent="HUD/PanelObjetivos" unique_id=792670452]
+layout_mode = 2
+
+[node name="BotonContraerObjetivos" type="Button" parent="HUD/PanelObjetivos/ContenidoObjetivos" unique_id=1137121974]
 layout_mode = 2
 
 [node name="TituloObjetivos" type="Label" parent="HUD/PanelObjetivos/ContenidoObjetivos" unique_id=787244107]
@@ -175,6 +217,9 @@ grow_horizontal = 0
 [node name="ContenidoEstado" type="VBoxContainer" parent="HUD/PanelEstadoRover" unique_id=1486089475]
 layout_mode = 2
 
+[node name="BotonContraerEstado" type="Button" parent="HUD/PanelEstadoRover/ContenidoEstado" unique_id=721666087]
+layout_mode = 2
+
 [node name="TituloEstado" type="Label" parent="HUD/PanelEstadoRover/ContenidoEstado" unique_id=1665108263]
 layout_mode = 2
 text = "ESTADO DEL ROVER"
@@ -183,10 +228,6 @@ text = "ESTADO DEL ROVER"
 layout_mode = 2
 value = 100.0
 metadata/_edit_use_anchors_ = true
-
-[node name="TextoIntegridad" type="Label" parent="HUD/PanelEstadoRover/ContenidoEstado" unique_id=1196277749]
-layout_mode = 2
-text = "	Estructura: 100%"
 
 [node name="TextoBateria" type="Label" parent="HUD/PanelEstadoRover/ContenidoEstado" unique_id=1219983397]
 layout_mode = 2

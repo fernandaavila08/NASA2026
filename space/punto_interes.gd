@@ -46,5 +46,13 @@ func ejecutar_interaccion() -> void:
 		"escaneo":
 			print("Analizando superficie")
 
+		"deteccion_hidrogeno":
+			print("Analizando posibles indicios de hidrógeno")
+
+		"analisis":
+			print("Análisis de muestra completado")
+
 		_:
 			print("Interacción no reconocida")
+
+	Misionextra.registrar_interaccion(tipo_interaccion)

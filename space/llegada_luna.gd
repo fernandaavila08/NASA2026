@@ -17,18 +17,12 @@ func _on_regreso_pressed() -> void:
 
 
 func _on_mission_1_pressed() -> void:
-	Misionextra.mision=1
-	#print(Misionextra.mision)
-	pass # Replace with function body.
+	Misionextra.seleccionar_mision(1)
 
 
 func _on_mission_2_pressed() -> void:
-	Misionextra.mision=2
-	#print("2")
-	pass # Replace with function body.
+	Misionextra.seleccionar_mision(2)
 
 
 func _on_mission_3_pressed() -> void:
-	Misionextra.mision=3
-	#print("3")
-	pass # Replace with function body.
+	Misionextra.seleccionar_mision(3)
