@@ -5,12 +5,14 @@ extends Control
 
 
 func _ready() -> void:
-	# Al entrar a la escena, carga el frame guardado y asegura que esté entre 0 y 3
-	sprite_rover.frame = clamp(frames_rover.frame_rover, 0, 3)
+	# Al entrar a la escena, pone el último frame que dejaste guardado
+	sprite_rover.frame = frames_rover.frame_rover
+
 
 func _on_izq_pressed() -> void:
 	sprite_rover.frame = clamp(sprite_rover.frame - 1, 0, 3)
 	frames_rover.guardar_frame(sprite_rover.frame)
+
 
 func _on_der_pressed() -> void:
 	sprite_rover.frame = clamp(sprite_rover.frame + 1, 0, 3)
