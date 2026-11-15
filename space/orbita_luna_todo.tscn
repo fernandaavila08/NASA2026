@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cf22w21tc568m"]
+
+[ext_resource type="Script" uid="uid://dpw6ky2ob5grp" path="res://orbita_luna_todo.gd" id="1_yqmq8"]
+
+[node name="orbita_luna_todo" type="Control" unique_id=1264691004]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_yqmq8")

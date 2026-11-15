@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ca2ywhtpe70o0"]
+
+[ext_resource type="Script" uid="uid://wbvl4oi1wdfc" path="res://entradaorbita.gd" id="1_qbute"]
+
+[node name="entradaorbita" type="Control" unique_id=32838875]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_qbute")

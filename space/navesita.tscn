@@ -2,7 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://dsjgmx2hpmymu" path="res://1.png" id="1_du8rx"]
 [ext_resource type="Texture2D" uid="uid://b0qspyed1fbf5" path="res://2.png" id="2_kobdw"]
-[ext_resource type="Texture2D" uid="uid://bfbu0hfiqw4px" path="res://Ilustración_sin_título-1.png" id="3_kobdw"]
+[ext_resource type="Texture2D" uid="uid://cocflhep4ge61" path="res://Ilustración_sin_título-11.png" id="3_eed6d"]
+[ext_resource type="Texture2D" uid="uid://dosla8xjqcwfg" path="res://Ilustración_sin_título-12.png" id="4_o2noq"]
+[ext_resource type="Texture2D" uid="uid://sdk4pq8gvebk" path="res://Ilustración_sin_título-13.png" id="5_rdnpe"]
+[ext_resource type="Texture2D" uid="uid://dx5ptegcfd8m2" path="res://Ilustración_sin_título-14.png" id="6_vxpkn"]
+[ext_resource type="Texture2D" uid="uid://dgjjpnip4jele" path="res://Ilustración_sin_título-3.png" id="7_4n0lq"]
+[ext_resource type="Texture2D" uid="uid://bwb746wef4wmc" path="res://Ilustración_sin_título-4.png" id="8_p1drf"]
+[ext_resource type="Texture2D" uid="uid://cdq5jlqoms07k" path="res://Ilustración_sin_título-2.png" id="9_ltepp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w8wy8"]
 radius = 61.0
@@ -58,9 +64,73 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wtqgy"]
+load_path = "res://.godot/imported/Ilustración_sin_título-1.png-36c99fb99f466053c5d1eb23abab58c7.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpd6j"]
+atlas = ExtResource("3_eed6d")
+region = Rect2(605, 0, 605, 600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6abo"]
+atlas = ExtResource("4_o2noq")
+region = Rect2(605, 0, 605, 600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ti4mh"]
+atlas = ExtResource("5_rdnpe")
+region = Rect2(605, 0, 605, 600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4ulh"]
+atlas = ExtResource("6_vxpkn")
+region = Rect2(605, 0, 605, 600)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_choid"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpd6j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6abo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ti4mh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w4ulh")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggovx"]
+atlas = ExtResource("7_4n0lq")
+region = Rect2(605, 1800, 605, 600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g18gg"]
+atlas = ExtResource("8_p1drf")
+region = Rect2(0, 1600, 1828, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpqgk"]
+atlas = ExtResource("9_ltepp")
+region = Rect2(0, 1600, 1828, 800)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2mvk3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggovx")
+}, {
+"duration": 1.2,
+"texture": SubResource("AtlasTexture_g18gg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpqgk")
+}],
+"loop": 2,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qslr8"]
 
@@ -80,13 +150,14 @@ sprite_frames = SubResource("SpriteFrames_6date")
 
 [node name="IlustraciónSinTítulo1" type="Sprite2D" parent="StaticBody2D" unique_id=428007040]
 position = Vector2(0, 16)
-texture = ExtResource("3_kobdw")
+texture = SubResource("CompressedTexture2D_wtqgy")
 
 [node name="techo" type="AnimatedSprite2D" parent="StaticBody2D" unique_id=1515754217]
 sprite_frames = SubResource("SpriteFrames_choid")
 
 [node name="propulsores" type="AnimatedSprite2D" parent="StaticBody2D" unique_id=310671402]
 sprite_frames = SubResource("SpriteFrames_2mvk3")
+frame_progress = 0.7991386
 
 [node name="payload" type="AnimatedSprite2D" parent="StaticBody2D" unique_id=904336120]
 sprite_frames = SubResource("SpriteFrames_qslr8")

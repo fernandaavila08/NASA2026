@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://c572e40y4dhu5"]
+
+[ext_resource type="Script" uid="uid://bqxw87mdhh4gf" path="res://orbita_marte.gd" id="1_v2oru"]
+
+[node name="orbita_marte" type="Control" unique_id=278132453]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v2oru")
