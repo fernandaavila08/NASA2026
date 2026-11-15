@@ -28,7 +28,7 @@ func _on_llegadaalaluna_pressed() -> void:
 
 
 func _on_launch_pressed() -> void:
-	#get_tree().change_scene_to_file("")
+	get_tree().change_scene_to_file("res://video_despeje.tscn")
 	pass # Replace with function body.
 
 

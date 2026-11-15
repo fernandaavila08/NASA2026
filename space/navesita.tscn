@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dsjgmx2hpmymu" path="res://1.png" id="1_du8rx"]
 [ext_resource type="Texture2D" uid="uid://b0qspyed1fbf5" path="res://2.png" id="2_kobdw"]
+[ext_resource type="Texture2D" uid="uid://bfbu0hfiqw4px" path="res://Ilustración_sin_título-1.png" id="3_kobdw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w8wy8"]
 radius = 61.0
@@ -57,6 +58,14 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_choid"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2mvk3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qslr8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_158xw"]
+
 [node name="navesita" type="Node2D" unique_id=126782568]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1203885569]
@@ -68,3 +77,19 @@ shape = SubResource("CapsuleShape2D_w8wy8")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D" unique_id=348899896]
 scale = Vector2(0.44624993, 0.44624993)
 sprite_frames = SubResource("SpriteFrames_6date")
+
+[node name="IlustraciónSinTítulo1" type="Sprite2D" parent="StaticBody2D" unique_id=428007040]
+position = Vector2(0, 16)
+texture = ExtResource("3_kobdw")
+
+[node name="techo" type="AnimatedSprite2D" parent="StaticBody2D" unique_id=1515754217]
+sprite_frames = SubResource("SpriteFrames_choid")
+
+[node name="propulsores" type="AnimatedSprite2D" parent="StaticBody2D" unique_id=310671402]
+sprite_frames = SubResource("SpriteFrames_2mvk3")
+
+[node name="payload" type="AnimatedSprite2D" parent="StaticBody2D" unique_id=904336120]
+sprite_frames = SubResource("SpriteFrames_qslr8")
+
+[node name="core" type="AnimatedSprite2D" parent="StaticBody2D" unique_id=1368376121]
+sprite_frames = SubResource("SpriteFrames_158xw")
