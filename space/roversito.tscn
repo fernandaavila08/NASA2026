@@ -43,13 +43,13 @@ size = Vector2(525, 165)
 
 [node name="roversito" type="Node2D" unique_id=1302248953]
 
-[node name="rover" type="CharacterBody2D" parent="." unique_id=632059954]
+[node name="rover_enmovimiento" type="CharacterBody2D" parent="." unique_id=632059954]
 
-[node name="roversin" type="AnimatedSprite2D" parent="rover" unique_id=894173336]
+[node name="roversin" type="AnimatedSprite2D" parent="rover_enmovimiento" unique_id=894173336]
 position = Vector2(423, 365)
 scale = Vector2(1.2890626, 1.1289061)
 sprite_frames = SubResource("SpriteFrames_w8wy8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="rover" unique_id=1888788141]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rover_enmovimiento" unique_id=1888788141]
 position = Vector2(380.5, 472.5)
 shape = SubResource("RectangleShape2D_w8wy8")
