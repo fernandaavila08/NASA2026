@@ -2,12 +2,22 @@ extends Control
 
 signal customizer_closed
 
-@export var slot_categories: Array[String] = [
+const ROCKET_CATEGORIES: Array[String] = [
 	"Payload_Fairing",
 	"Upper_Stage",
 	"Rocket_Core",
 	"Rocket_Boosters"
 ]
+
+const ROVER_CATEGORIES: Array[String] = [
+	"Rover_Template",
+	"Rover_Comms",
+	"Rover_Science",
+	"Rover_Extra"
+]
+
+@export var is_rover_mode: bool = false
+var slot_categories: Array[String] = ROCKET_CATEGORIES.duplicate()
 
 @onready var close_button: Button = $MarginContainer/MainLayout/LeftColumn/TopBar/CloseButton
 @onready var component_name_label: Label = $MarginContainer/MainLayout/LeftColumn/InfoPanel/InfoVBox/ComponentNameLabel
@@ -27,6 +37,7 @@ signal customizer_closed
 	$MarginContainer/MainLayout/CenterColumn/RightArrows/NextBtn3
 ]
 
+@onready var preview_stack: Control = $MarginContainer/MainLayout/CenterColumn/PreviewStack
 @onready var part_textures: Array[TextureRect] = [
 	$MarginContainer/MainLayout/CenterColumn/PreviewStack/PartTexture0,
 	$MarginContainer/MainLayout/CenterColumn/PreviewStack/PartTexture1,
@@ -55,10 +66,35 @@ func _ready() -> void:
 	for i in range(4):
 		prev_buttons[i].pressed.connect(_on_arrow_pressed.bind(i, -1))
 		next_buttons[i].pressed.connect(_on_arrow_pressed.bind(i, 1))
-		_update_slot_visual(i, false)
 	
-	_update_slot_visual(0, true)
+	set_mode(is_rover_mode)
 	_refresh_all_bars()
+
+
+func set_mode(rover: bool) -> void:
+	is_rover_mode = rover
+	slot_categories = ROVER_CATEGORIES.duplicate() if rover else ROCKET_CATEGORIES.duplicate()
+	
+	if not is_node_ready():
+		return
+	
+	# Ordena qué capa se dibuja al fondo y cuál al frente
+	if rover:
+		# Rover: Chasis (0) al fondo, luego Comms (1), Ciencia (2) y Extra (3) encima
+		preview_stack.move_child(part_textures[0], 0)
+		preview_stack.move_child(part_textures[1], 1)
+		preview_stack.move_child(part_textures[2], 2)
+		preview_stack.move_child(part_textures[3], 3)
+	else:
+		# Cohete: Núcleo (2) al fondo, Etapa Sup (1), Cofia (0) y Boosters (3) al frente
+		preview_stack.move_child(part_textures[2], 0)
+		preview_stack.move_child(part_textures[1], 1)
+		preview_stack.move_child(part_textures[0], 2)
+		preview_stack.move_child(part_textures[3], 3)
+	
+	for i in range(4):
+		_update_slot_visual(i, false)
+	_update_slot_visual(0, true)
 
 
 func _on_arrow_pressed(slot_idx: int, direction: int) -> void:

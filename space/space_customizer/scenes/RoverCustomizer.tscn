@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://iigg3sl8jga8"]
+
+[ext_resource type="PackedScene" uid="uid://bhg0gxhwkb8qu" path="res://space_customizer/scenes/CustomizerBase.tscn" id="1_dnsi6"]
+
+[node name="CustomizerBase" unique_id=1933018179 instance=ExtResource("1_dnsi6")]
+is_rover_mode = true
