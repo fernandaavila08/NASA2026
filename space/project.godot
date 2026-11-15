@@ -28,11 +28,9 @@ MissionState="*uid://bgj3xfgdgoxff"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
-<<<<<<< HEAD
 [dotnet]
 
 project/assembly_name="SPACE"
-=======
 [input]
 
 izq={
